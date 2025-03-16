@@ -9,7 +9,6 @@ const cars = [
   { id: '4', name: 'Porsche 911 Carrera', image: require('../assets/car4.jpg'), price: 60000 },
   { id: '5', name: 'VW Fusca 1990', image: require('../assets/car5.jpg'), price: 40000 },
   { id: '6', name: 'VW Gol 2010', image: require('../assets/car6.jpg'), price: 30000 },
-  // Adicione mais carros aqui
 ];
 
 const HomeScreen = ({ navigation }) => {
@@ -20,7 +19,6 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const finalizarCompra = () => {
-    // Aqui você pode adicionar a lógica para finalizar a compra
     alert('Compra finalizada com sucesso!');
     setCarrinho([]); // Limpa o carrinho após a compra
   };
