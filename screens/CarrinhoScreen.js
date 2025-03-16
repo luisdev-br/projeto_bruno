@@ -4,12 +4,12 @@ import { View, Text, FlatList, StyleSheet, Button, Alert } from 'react-native';
 const CarrinhoScreen = ({ route, navigation }) => {
   const { carrinho } = route.params;
 
-  // Função para calcular o valor total do carrinho
+ 
   const calcularTotal = () => {
     return carrinho.reduce((total, item) => total + item.price, 0);
   };
 
-  // Função para finalizar a compra
+  
   const finalizarCompra = () => {
     Alert.alert(
       'Compra Finalizada',
@@ -27,7 +27,7 @@ const CarrinhoScreen = ({ route, navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>Carrinho de Compras</Text>
 
-      {/* Lista de carros no carrinho */}
+      {}
       <FlatList
         data={carrinho}
         keyExtractor={(item, index) => index.toString()}
@@ -39,10 +39,10 @@ const CarrinhoScreen = ({ route, navigation }) => {
         )}
       />
 
-      {/* Valor total da compra */}
+      {}
       <Text style={styles.total}>Total: R$ {calcularTotal().toLocaleString('pt-BR')}</Text>
 
-      {/* Botão para finalizar a compra */}
+      {}
       <Button title="Finalizar Compra" onPress={finalizarCompra} />
     </View>
   );
